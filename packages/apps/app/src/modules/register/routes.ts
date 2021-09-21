@@ -1,6 +1,4 @@
-const Register = () => {
-  return <div>Register form comes here</div>
-}
+import Register from "."
 
 export default [
   {
@@ -11,4 +9,5 @@ export default [
     path: '/register/me',
     component: Register
   }
-]
+];
+

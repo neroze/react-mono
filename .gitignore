@@ -1,1 +1,4 @@
 node_modules
+packages/apps/app/node_modules
+packages/packages/core/node_modules
+
