@@ -1,6 +1,6 @@
 import Register from "."
 
-export default [
+export const routes = [
   {
     path: '/reg/me',
     component: Register
@@ -10,4 +10,7 @@ export default [
     component: Register
   }
 ];
+
+export default routes;
+
 

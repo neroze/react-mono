@@ -1,21 +1,17 @@
 import { render } from 'react-dom'
 import Kernal from '@lp/core/src/kernel'
-import App from '@lp/core/src/app'
-
 import { RootStore } from '@lp/core/src/stores/root';
 
+import Layout from './layout'
 interface MyAppI {
   config: any;
-  baseComponent: any
+  allRoutes: any
 }
 
-// const App = () => {
-//   return <div>I am App</div>
-// }
 //@ts-ignore
-const MyApp: React.FC<MyAppI> = ({ config = { appName: 'Wild World' }, baseComponent }) => {
+const MyApp: React.FC<MyAppI> = ({ config = { appName: 'Wild World' }, allRoutes }) => {
   const rootElement = document.getElementById('root')
-  return render(<App config={config} baseComponent={baseComponent} />, rootElement)
+  return render(<Layout routes={allRoutes} config={config} />, rootElement)
 }
 
 const moduleRoutes = [import('./modules/home/routes'), import('./modules/register/routes')]

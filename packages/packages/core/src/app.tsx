@@ -7,15 +7,14 @@ console.log('====', useStore)
 
 interface AppType {
   config: any;
-  baseComponent: any;
+  // baseComponent: any;
+  allRoutes: any;
 }
 
-const App: React.FC<AppType> = ({config, baseComponent}) => {
+const App: React.FC<AppType> = ({config, allRoutes}) => {
   const { stores } = config;
   return (
-      <Provider {...stores}>
-        {baseComponent()}
-      </Provider>
+      <Provider {...stores} routes={allRoutes} />
   )
 }
 

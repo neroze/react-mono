@@ -1,11 +1,5 @@
-// import QS from 'query-string'
 // import React from 'react'
 // import isFunction from 'lodash-es/isFunction'
-import bind from 'lodash-es/bind'
-import set from 'lodash-es/set'
-import get from 'lodash-es/get'
-import each from 'lodash-es/each'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import RouteMaker from "./templates/routes";
 // import defaults from "lodash/defaults";
 import last from 'lodash-es/last'
@@ -118,8 +112,9 @@ let App = {
       })
     //   App.Menus = []
       console.log('App.routes all ==>', allRoutes)
-      const baseComponent = RouteMaker(allRoutes)
-      app && app({ config, baseComponent })
+      // const baseComponent = RouteMaker(allRoutes)
+      // app && app({ config, baseComponent })
+      app && app({ config, allRoutes })
 
       return App.processes.start()
     })
